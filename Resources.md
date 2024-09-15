@@ -8,12 +8,12 @@ Many sections reference commands or links in their resources.
 ```
 # cks-master
 sudo -i
-bash <(curl -s https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/cluster-setup/latest/install_master.sh)
+bash <(curl -s https://raw.githubusercontent.com/raurnhammer/cks-course-environment/main/cluster-setup/latest/install_master.sh)
 
 
 # cks-worker
 sudo -i
-bash <(curl -s https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/cluster-setup/latest/install_worker.sh)
+bash <(curl -s https://raw.githubusercontent.com/raurnhammer/cks-course-environment/main/cluster-setup/latest/install_worker.sh)
 
 
 # run the printed kubeadm-join-command from the master on the worker

@@ -61,12 +61,8 @@ systemctl daemon-reload
 
 
 ### install podman
-. /etc/os-release
-echo "deb http://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_${VERSION_ID}/ /" | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:testing.list
-curl -L "http://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_${VERSION_ID}/Release.key" | sudo apt-key add -
-apt-get update -qq
-apt-get -qq -y install podman cri-tools containers-common
-rm /etc/apt/sources.list.d/devel:kubic:libcontainers:testing.list
+sudo apt-get update
+sudo apt-get install -y podman
 cat <<EOF | sudo tee /etc/containers/registries.conf
 [registries.search]
 registries = ['docker.io']
